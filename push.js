@@ -1,9 +1,7 @@
 var push = require("web-push");
 
-// to generate public and private key
-// let vapidKeys = push.generateVAPIDKeys();
-// console.log(vapidKeys);
-
+// get public and private key from terminal
+// please go to generate-key.js file
 let { publicKey, privateKey } = {
   publicKey:
     "BOsTwJiDWPhu2B47CMUsDflQfbHoHIh_TZ8LX547xHwdP5LdMOtB9XLoK2upwZ0GtpWxjSUxnb8GAob9BjZKNfc",
