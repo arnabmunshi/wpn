@@ -1,7 +1,7 @@
 self.addEventListener("push", function (e) {
   var options = {
-    body: "This notification was generated from a push!",
-    icon: "images/example.png",
+    body: "New blog posted",
+    icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -9,12 +9,12 @@ self.addEventListener("push", function (e) {
     },
     actions: [
       {
-        action: "explore",
-        title: "Explore this new world",
+        action: "https://switchon.org.in/",
+        title: "Open",
         icon: "images/checkmark.png",
       },
       { action: "close", title: "Close", icon: "images/xmark.png" },
     ],
   };
-  e.waitUntil(self.registration.showNotification("Hello world!", options));
+  e.waitUntil(self.registration.showNotification("Switch ON", options));
 });
