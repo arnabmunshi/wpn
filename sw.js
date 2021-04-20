@@ -11,10 +11,13 @@ self.addEventListener("push", function (e) {
       {
         action: "https://switchon.org.in/",
         title: "Open",
-//         icon: "images/checkmark.png",
-        icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
+        // icon: "images/checkmark.png", // optional
       },
-      { action: "close", title: "Close", icon: "images/xmark.png" },
+      {
+        action: "close",
+        title: "Close",
+        // icon: "images/xmark.png" // optional
+      },
     ],
   };
   e.waitUntil(self.registration.showNotification("Switch ON", options));
