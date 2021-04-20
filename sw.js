@@ -11,7 +11,8 @@ self.addEventListener("push", function (e) {
       {
         action: "https://switchon.org.in/",
         title: "Open",
-        icon: "images/checkmark.png",
+//         icon: "images/checkmark.png",
+        icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
       },
       { action: "close", title: "Close", icon: "images/xmark.png" },
     ],
