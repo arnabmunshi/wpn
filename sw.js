@@ -1,11 +1,10 @@
 self.addEventListener("push", function (e) {
-  if(e.data) {
+  if (e.data) {
     var payload = JSON.parse(e.data.text());
-    console.log(payload);
-    var title = payload.data.title;
-    
+    var body = payload.data.body;
+
     var options = {
-      body: "New blog posted",
+      body: body,
       icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
       vibrate: [100, 50, 100],
       data: {
@@ -14,7 +13,7 @@ self.addEventListener("push", function (e) {
       },
       actions: [
         {
-          action: "https://switchon.org.in/",
+          action: "open",
           title: "Open",
           // icon: "images/checkmark.png", // optional
         },
@@ -25,7 +24,7 @@ self.addEventListener("push", function (e) {
         },
       ],
     };
-    e.waitUntil(self.registration.showNotification(title, options));
+    e.waitUntil(self.registration.showNotification("Switch ON", options));
   } else {
     console.log("Event does not have data...");
   }
