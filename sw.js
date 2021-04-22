@@ -3,8 +3,7 @@ self.addEventListener("push", function (e) {
     console.log(e.data.text());
     return;
     var payload = JSON.parse(e.data.text());
-    var body = payload.data.body;
-    console.log(body);
+    console.log(payload);
 
     var options = {
       body: body,
