@@ -1,7 +1,7 @@
 self.addEventListener("push", function (e) {
   if(e.data) {
-    console.log(e.data.text());
     var payload = JSON.parse(e.data.text());
+    console.log(payload);
     var title = payload.data.title;
     
     var options = {
