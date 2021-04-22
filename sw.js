@@ -1,4 +1,5 @@
 self.addEventListener("push", function (e) {
+  console.log(JSON.parse(e.data.text()));
   var options = {
     body: "New blog posted",
     icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
