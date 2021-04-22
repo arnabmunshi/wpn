@@ -1,10 +1,9 @@
 self.addEventListener("push", function (e) {
   if (e.data) {
-    var payload = JSON.parse(e.data.text());
-    console.log(payload);
+    console.log(e.data.text());
 
     var options = {
-      body: body,
+      body: e.data.text(),
       icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
       vibrate: [100, 50, 100],
       data: {
