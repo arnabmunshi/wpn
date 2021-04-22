@@ -1,6 +1,6 @@
 self.addEventListener("push", function (e) {
   if (e.data) {
-    var payload = JSON.parse(e.data.text());
+    var payload = JSON.parse(e.data);
     console.log(payload);
     var body = payload.data.body;
 
