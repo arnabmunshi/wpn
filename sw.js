@@ -1,5 +1,9 @@
 self.addEventListener("push", function (e) {
-  if(event.data) {
+  if(e.data) {
+    console.log(e.data);
+    var payload = JSON.parse(e.data.text());
+    var title = payload.data.title;
+    
     var options = {
       body: "New blog posted",
       icon: "https://switchon.org.in/assets/switchon/images/favicon-32x32.png",
@@ -21,7 +25,7 @@ self.addEventListener("push", function (e) {
         },
       ],
     };
-    e.waitUntil(self.registration.showNotification("Switch ON", options));
+    e.waitUntil(self.registration.showNotification(title, options));
   } else {
     console.log("Event does not have data...");
   }
