@@ -1,5 +1,5 @@
 addEventListener('load', async() => {
-  let sw = await navigator.serviceWorker.register('https://webpusnotification.netlify.app/sw.js')
+  let sw = await navigator.serviceWorker.register('https://webprismits.com/assets/js/sw.js')
   console.log(sw);
 });
 
